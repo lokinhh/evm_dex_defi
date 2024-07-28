@@ -1,0 +1,7 @@
+{
+  "name": "evm-dex-defi",
+  "version": "0.1.0",
+  "private": true,
+  "description": "ChainDex — EVM AMM DEX",
+  "license": "MIT"
+}
