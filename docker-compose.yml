@@ -1,0 +1,24 @@
+version: '3.9'
+
+services:
+  hardhat:
+    image: node:22-bookworm
+    working_dir: /app
+    volumes:
+      - .:/app
+    command: npx hardhat node --hostname 0.0.0.0
+    ports:
+      - '8545:8545'
+
+  web:
+    image: node:22-bookworm
+    working_dir: /app/frontend
+    volumes:
+      - ./frontend:/app/frontend
+    environment:
+      NEXT_PUBLIC_CHAIN_ID: 31337
+    command: sh -c "npm ci && npm run dev"
+    ports:
+      - '3001:3001'
+    depends_on:
+      - hardhat
