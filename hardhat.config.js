@@ -26,4 +26,20 @@ module.exports = {
       chainId: 97,
     },
   },
+  gasReporter: {
+    enabled: process.env.REPORT_GAS === 'true',
+    currency: 'USD',
+  },
+  etherscan: {
+    apiKey: {
+      sepolia: process.env.ETHERSCAN_API_KEY || '',
+      bscTestnet: process.env.BSCSCAN_API_KEY || '',
+    },
+  },
+  paths: {
+    sources: './contracts',
+    tests: './test',
+    cache: './cache',
+    artifacts: './artifacts',
+  },
 };
