@@ -1,8 +1,5 @@
 # ChainDex
 
-EVM decentralized exchange — early scaffold.
+Production-hardened EVM DEX with liquidity pools, AMM swaps, and LP staking.
 
-## Stack
-
-- Solidity 0.8.x
-- Hardhat
+Supports Ethereum Sepolia and BSC testnet. See `docs/PRODUCTION.md`.
